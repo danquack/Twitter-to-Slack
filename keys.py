@@ -1,0 +1,15 @@
+twitter = dict(
+CONSUMER_KEY = '',
+CONSUMER_SECRET = '',
+ACCESS_TOKEN_KEY = '',
+ACCESS_TOKEN_SECRET = ''
+)
+
+slack = dict(
+url = ''
+)
+
+keys = dict(
+twitter = twitter,
+slack   = slack
+)
