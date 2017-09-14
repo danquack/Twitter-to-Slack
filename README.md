@@ -16,7 +16,7 @@ Update Keys.py file with your keys that can be generated from
 </ul>
 </li>
 <li>
-Insert Twitter queries and Slack channel on line 70
+Insert Twitter queries and Slack channel on line 70 of twitter.py
 </li>
 </ol>
 
