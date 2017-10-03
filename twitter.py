@@ -1,5 +1,6 @@
 import json
 import requests
+import sys
 
 # Dependencies
 from keys import keys
@@ -23,13 +24,14 @@ class StdOutListener(StreamListener):
             if res is not None:
                 #print error occured
                 print(res)
+                sys.exit(1)
         except Exception as e:
-            print e
+            raise e
         return True
 
     #If an error occurs
     def on_error(self, status):
-        print status
+        raise Exception(str(status))
 
 # A function to create a new slack object, and then post to a particular channel
 def postToSlack(user, message, channel):
@@ -64,6 +66,7 @@ def readTwitter(queries, channel):
 
     except Exception as e:
         print e
+        raise e
 
 if __name__ == "__main__":
     #Set each query in array in array
